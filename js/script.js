@@ -64,3 +64,9 @@ if( computerMove == 'papier' && playerMove == 'kamień'){
 if( computerMove == 'kamień' && playerMove == 'nieznany ruch'){
   printMessage('TVARDY weź się nie wygłupiaj. Wybierz swój ruch: kamień, papier lub nożyce. Tu się nie gra kaloryferem, krzesłem ...ani śrubokrętem');
 }
+if( computerMove == 'nożyce' && playerMove == 'nieznany ruch'){
+  printMessage('TVARDY weź się nie wygłupiaj. Wybierz swój ruch: kamień, papier lub nożyce. Tu się nie gra kaloryferem, krzesłem ...ani śrubokrętem');
+}
+if( computerMove == 'papier' && playerMove == 'nieznany ruch'){
+  printMessage('TVARDY weź się nie wygłupiaj. Wybierz swój ruch: kamień, papier lub nożyce. Tu się nie gra kaloryferem, krzesłem ...ani śrubokrętem');
+}
