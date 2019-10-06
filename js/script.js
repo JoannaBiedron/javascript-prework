@@ -33,3 +33,34 @@ else if (playerInput=='3') {
 }
 
 printMessage('Twój ruch to: ' + playerMove);
+
+if( computerMove == 'kamień' && playerMove == 'papier'){
+  printMessage('Ty wygrywasz!');
+}
+if( computerMove == 'papier' && playerMove == 'nożyce'){
+  printMessage('Ty wygrywasz!');
+}
+if( computerMove == 'nożyce' && playerMove == 'kamień'){
+  printMessage('Ty wygrywasz!');
+}
+if( computerMove == 'kamień' && playerMove == 'kamień'){
+  printMessage('Remis!');
+}
+if( computerMove == 'nożyce' && playerMove == 'nożyce'){
+  printMessage('Remis!');
+}
+if( computerMove == 'papier' && playerMove == 'papier'){
+  printMessage('Remis!');
+}
+if( computerMove == 'kamień' && playerMove == 'nożyce'){
+  printMessage('Wygrywa komputer!');
+}
+if( computerMove == 'nożyce' && playerMove == 'papier'){
+  printMessage('Wygrywa komputer!');
+}
+if( computerMove == 'papier' && playerMove == 'kamień'){
+  printMessage('Wygrywa komputer!');
+}
+if( computerMove == 'kamień' && playerMove == 'nieznany ruch'){
+  printMessage('TVARDY weź się nie wygłupiaj. Wybierz swój ruch: kamień, papier lub nożyce. Tu się nie gra kaloryferem, krzesłem ...ani śrubokrętem');
+}
