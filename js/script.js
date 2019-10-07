@@ -10,8 +10,9 @@ function getMoveName(argMoveId){
     return 'nożyce';
   }
   else {
-    printMessage('Nie znam ruchu o id ' + argMoveId + '.');
     return 'nieznany ruch';
+    /*printMessage('TVARDY weź się nie wygłupiaj. Wybierz swój ruch: kamień, papier lub nożyce. Tu się nie gra kaloryferem, krzesłem ...ani śrubokrętem');
+*/
   }
 }
 
@@ -53,7 +54,7 @@ printMessage('Twój ruch to: ' + argPlayerMove);
 
 function displayResult(argComputerMove, argPlayerMove){
 
-if( argComputerMove == 'kamień' && argPrgPlayerMove == 'papier'){
+if( argComputerMove == 'kamień' && argPlayerMove == 'papier'){
   return('Ty wygrywasz!');
 }
 else if( argComputerMove == 'papier' && argPlayerMove == 'nożyce'){
