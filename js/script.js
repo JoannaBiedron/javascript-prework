@@ -19,7 +19,7 @@ let randomNumber = Math.floor(Math.random() * 3 + 1);
 
 console.log('Wylosowana liczba to: ' + randomNumber);
 
-let computerMove = getMoveName (randomNumber);
+let argComputerMove = getMoveName (randomNumber);
 /*
 if(randomNumber == 1){
   computerMove = 'kamień';
@@ -31,13 +31,13 @@ else if (randomNumber==3) {
   computerMove='papier';
 }*/
 
-printMessage('Mój ruch to: ' + computerMove);
+printMessage('Ruch komputera to: ' + argComputerMove);
 
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
 console.log('Gracz wpisał: ' + playerInput);
 
-let playerMove = getMoveName (playerInput);
+let argPlayerMove = getMoveName (playerInput);
 /*
 if(playerInput == '1'){
   playerMove = 'kamień';
@@ -49,41 +49,46 @@ else if (playerInput=='3') {
   playerMove='papier';
 }*/
 
-printMessage('Twój ruch to: ' + playerMove);
+printMessage('Twój ruch to: ' + argPlayerMove);
 
-if( computerMove == 'kamień' && playerMove == 'papier'){
-  printMessage('Ty wygrywasz!');
+function displayResult(argComputerMove, argPlayerMove){
+
+if( argComputerMove == 'kamień' && argPrgPlayerMove == 'papier'){
+  return('Ty wygrywasz!');
 }
-if( computerMove == 'papier' && playerMove == 'nożyce'){
-  printMessage('Ty wygrywasz!');
+else if( argComputerMove == 'papier' && argPlayerMove == 'nożyce'){
+  return('Ty wygrywasz!');
 }
-if( computerMove == 'nożyce' && playerMove == 'kamień'){
-  printMessage('Ty wygrywasz!');
+else if( argComputerMove == 'nożyce' && argPlayerMove == 'kamień'){
+  return('Ty wygrywasz!');
 }
-if( computerMove == 'kamień' && playerMove == 'kamień'){
-  printMessage('Remis!');
+else if( argComputerMove == 'kamień' && argPlayerMove == 'kamień'){
+  return('Remis!');
 }
-if( computerMove == 'nożyce' && playerMove == 'nożyce'){
-  printMessage('Remis!');
+else if( argComputerMove == 'nożyce' && argPlayerMove == 'nożyce'){
+  return('Remis!');
 }
-if( computerMove == 'papier' && playerMove == 'papier'){
-  printMessage('Remis!');
+else if( argComputerMove == 'papier' && argPlayerMove == 'papier'){
+  return('Remis!');
 }
-if( computerMove == 'kamień' && playerMove == 'nożyce'){
-  printMessage('Wygrywa komputer!');
+else if( argComputerMove == 'kamień' && argPlayerMove == 'nożyce'){
+  return('Wygrywa komputer!');
 }
-if( computerMove == 'nożyce' && playerMove == 'papier'){
-  printMessage('Wygrywa komputer!');
+else if( argComputerMove == 'nożyce' && argPlayerMove == 'papier'){
+  return('Wygrywa komputer!');
 }
-if( computerMove == 'papier' && playerMove == 'kamień'){
-  printMessage('Wygrywa komputer!');
+else if( argComputerMove == 'papier' && argPlayerMove == 'kamień'){
+  return('Wygrywa komputer!');
 }
-if( computerMove == 'kamień' && playerMove == 'nieznany ruch'){
-  printMessage('TVARDY weź się nie wygłupiaj. Wybierz swój ruch: kamień, papier lub nożyce. Tu się nie gra kaloryferem, krzesłem ...ani śrubokrętem');
+else if( argComputerMove == 'kamień' && argPlayerMove == 'nieznany ruch'){
+  return('TVARDY weź się nie wygłupiaj. Wybierz swój ruch: kamień, papier lub nożyce. Tu się nie gra kaloryferem, krzesłem ...ani śrubokrętem');
 }
-if( computerMove == 'nożyce' && playerMove == 'nieznany ruch'){
-  printMessage('TVARDY weź się nie wygłupiaj. Wybierz swój ruch: kamień, papier lub nożyce. Tu się nie gra kaloryferem, krzesłem ...ani śrubokrętem');
+else if( argComputerMove == 'nożyce' && argPlayerMove == 'nieznany ruch'){
+  return('TVARDY weź się nie wygłupiaj. Wybierz swój ruch: kamień, papier lub nożyce. Tu się nie gra kaloryferem, krzesłem ...ani śrubokrętem');
 }
-if( computerMove == 'papier' && playerMove == 'nieznany ruch'){
-  printMessage('TVARDY weź się nie wygłupiaj. Wybierz swój ruch: kamień, papier lub nożyce. Tu się nie gra kaloryferem, krzesłem ...ani śrubokrętem');
+else if( argComputerMove == 'papier' && argPlayerMove == 'nieznany ruch'){
+return('TVARDY weź się nie wygłupiaj. Wybierz swój ruch: kamień, papier lub nożyce. Tu się nie gra kaloryferem, krzesłem ...ani śrubokrętem');
 }
+}
+/*printMessage('Komputer zagrał '+argComputerMove+', a Ty '+argPlayerMove);*/
+printMessage ('wynik: '+ displayResult(argComputerMove, argPlayerMove));
