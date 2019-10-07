@@ -1,6 +1,6 @@
 function playGame(playerInput){
 
-  function clearMessages(){}
+  clearMessages();
 
   /*funkcja getMoveName */
   function getMoveName(argMoveId){
@@ -106,4 +106,21 @@ function playGame(playerInput){
   /*printMessage('Komputer zagrał '+argComputerMove+', a Ty '+argPlayerMove);*/
   printMessage ('wynik: '+ displayResult(argComputerMove, argPlayerMove));
 }
-playGame(3);
+/*playGame(3);*/
+/*
+button-rock.addEventListener('click',);
+button-paper.addEventListener('click');
+button-scissors.addEventListener('click')*/
+
+document.getElementById('button-rock').addEventListener('click', function(){
+  /*printMessage('Wybrałeś kamień.')*/
+  playGame(1);
+});
+document.getElementById('button-paper').addEventListener('click', function(){
+    /*printMessage('Wybrałeś papier.')*/
+  playGame(2);
+});
+document.getElementById('button-scissors').addEventListener('click', function(){
+    /*printMessage('Wybrałeś nożyce.')*/
+  playGame(3);
+});
