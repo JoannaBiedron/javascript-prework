@@ -1,25 +1,42 @@
 body{
-  background-color: #f6e58d;
+  background-color: #81ecec;
 }
 
-.container{
+#container{
   width: 900px;
-  background-color: #ffbe76;
+  height: 500px;
+  background-color: pink;
   margin: auto;
+  margin-top: 60px;
   padding: 20px
 }
 
-.header{
+#header{
+  margin:30px;
   text-align: center;
-  color: #eb4d4b;
+  color: black ;
 }
 
-.title{
+#title{
   font-size: 40px;
+  text-transform: uppercase;
 }
 
-.rules{
-  font-size: 15px
-  border: 2px solid #eb4d4b;
+#playerChoice{
+  text-align: center;;
+}
+button{
+background-color: #6c5ce7;
+padding:15px;
+margin: 10px;
+font-size: 25px
+}
+
+#messages{
+  height: min 100px;
   padding: 5px;
+  margin: 30px;
+  text-align: center;
+  font-size: 25px;
+
 }

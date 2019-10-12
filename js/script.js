@@ -21,25 +21,6 @@ function playGame(playerInput){
     }
   }
 
-  /*Ruch komputera*/
-  let randomNumber = Math.floor(Math.random() * 3 + 1);
-
-  console.log('Wylosowana liczba to: ' + randomNumber);
-
-  let argComputerMove = getMoveName (randomNumber);
-  /*
-  if(randomNumber == 1){
-    computerMove = 'kamień';
-  }
-  else if(randomNumber==2){
-    computerMove='nożyce';
-  }
-  else if (randomNumber==3) {
-    computerMove='papier';
-  }
-  */
-
-  printMessage('Ruch komputera to: ' + argComputerMove);
 
   /*Ruch gracza*/
 
@@ -61,6 +42,27 @@ function playGame(playerInput){
   */
 
   printMessage('Twój ruch to: ' + argPlayerMove);
+
+  /*Ruch komputera*/
+  let randomNumber = Math.floor(Math.random() * 3 + 1);
+
+  console.log('Wylosowana liczba to: ' + randomNumber);
+
+  let argComputerMove = getMoveName (randomNumber);
+  /*
+  if(randomNumber == 1){
+    computerMove = 'kamień';
+  }
+  else if(randomNumber==2){
+    computerMove='nożyce';
+  }
+  else if (randomNumber==3) {
+    computerMove='papier';
+  }
+  */
+
+  printMessage('Ruch komputera to: ' + argComputerMove);
+
 
   /*funkcja displayResult - wynik */
 
