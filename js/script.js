@@ -16,30 +16,14 @@ function playGame(playerInput){
     }
     else {
       return 'nieznany ruch';
-    /*printMessage('TVARDY weź się nie wygłupiaj. Wybierz swój ruch: kamień, papier lub nożyce. Tu się nie gra kaloryferem, krzesłem ...ani śrubokrętem');
-    */
+
     }
   }
-
-
   /*Ruch gracza*/
 
-  /*let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');*/
-
-  console.log('Gracz wpisał: ' + playerInput);
+  console.log('Gracz wybrał: ' + playerInput);
 
   let argPlayerMove = getMoveName (playerInput);
-  /*
-  if(playerInput == '1'){
-    playerMove = 'kamień';
-  }
-  else if (playerInput=='2') {
-    playerMove='nożyce';
-  }
-  else if (playerInput=='3') {
-    playerMove='papier';
-  }
-  */
 
   printMessage('Twój ruch to: ' + argPlayerMove);
 
@@ -49,17 +33,6 @@ function playGame(playerInput){
   console.log('Wylosowana liczba to: ' + randomNumber);
 
   let argComputerMove = getMoveName (randomNumber);
-  /*
-  if(randomNumber == 1){
-    computerMove = 'kamień';
-  }
-  else if(randomNumber==2){
-    computerMove='nożyce';
-  }
-  else if (randomNumber==3) {
-    computerMove='papier';
-  }
-  */
 
   printMessage('Ruch komputera to: ' + argComputerMove);
 
@@ -69,13 +42,13 @@ function playGame(playerInput){
   function displayResult(argComputerMove, argPlayerMove){
 
     if( argComputerMove == 'kamień' && argPlayerMove == 'papier'){
-      return('Ty wygrywasz!');
+      return('Twój papier zakrywa kamień. Wygrywasz!');
     }
     else if( argComputerMove == 'papier' && argPlayerMove == 'nożyce'){
-      return('Ty wygrywasz!');
+      return('Twoje nożyce tną papier. Wygrywasz!');
     }
     else if( argComputerMove == 'nożyce' && argPlayerMove == 'kamień'){
-      return('Ty wygrywasz!');
+      return('Twój kamień tępi nożyce. Wygrywasz!');
     }
     else if( argComputerMove == 'kamień' && argPlayerMove == 'kamień'){
       return('Remis!');
@@ -87,13 +60,13 @@ function playGame(playerInput){
       return('Remis!');
     }
     else if( argComputerMove == 'kamień' && argPlayerMove == 'nożyce'){
-      return('Wygrywa komputer!');
+      return('Kamień tępi Twoje nożyce. Wygrywa komputer!');
     }
     else if( argComputerMove == 'nożyce' && argPlayerMove == 'papier'){
-      return('Wygrywa komputer!');
+      return('Nożyce tną Twój papier. Wygrywa komputer!');
     }
     else if( argComputerMove == 'papier' && argPlayerMove == 'kamień'){
-      return('Wygrywa komputer!');
+      return(' Papier zakrywa Twój kamień. Wygrywa komputer!');
     }
     else if( argComputerMove == 'kamień' && argPlayerMove == 'nieznany ruch'){
       return('TVARDY weź się nie wygłupiaj. Wybierz swój ruch: kamień, papier lub nożyce. Tu się nie gra kaloryferem, krzesłem ...ani śrubokrętem');
@@ -105,24 +78,17 @@ function playGame(playerInput){
       return('TVARDY weź się nie wygłupiaj. Wybierz swój ruch: kamień, papier lub nożyce. Tu się nie gra kaloryferem, krzesłem ...ani śrubokrętem');
     }
   }
-  /*printMessage('Komputer zagrał '+argComputerMove+', a Ty '+argPlayerMove);*/
+
   printMessage ('wynik: '+ displayResult(argComputerMove, argPlayerMove));
 }
 /*playGame(3);*/
-/*
-button-rock.addEventListener('click',);
-button-paper.addEventListener('click');
-button-scissors.addEventListener('click')*/
 
 document.getElementById('button-rock').addEventListener('click', function(){
-  /*printMessage('Wybrałeś kamień.')*/
   playGame(1);
 });
 document.getElementById('button-paper').addEventListener('click', function(){
-    /*printMessage('Wybrałeś papier.')*/
   playGame(2);
 });
 document.getElementById('button-scissors').addEventListener('click', function(){
-    /*printMessage('Wybrałeś nożyce.')*/
   playGame(3);
 });
