@@ -68,15 +68,6 @@ function playGame(playerInput){
     else if( argComputerMove == 'papier' && argPlayerMove == 'kamień'){
       return(' Papier zakrywa Twój kamień. Wygrywa komputer!');
     }
-    else if( argComputerMove == 'kamień' && argPlayerMove == 'nieznany ruch'){
-      return('TVARDY weź się nie wygłupiaj. Wybierz swój ruch: kamień, papier lub nożyce. Tu się nie gra kaloryferem, krzesłem ...ani śrubokrętem');
-    }
-    else if( argComputerMove == 'nożyce' && argPlayerMove == 'nieznany ruch'){
-      return('TVARDY weź się nie wygłupiaj. Wybierz swój ruch: kamień, papier lub nożyce. Tu się nie gra kaloryferem, krzesłem ...ani śrubokrętem');
-    }
-    else if( argComputerMove == 'papier' && argPlayerMove == 'nieznany ruch'){
-      return('TVARDY weź się nie wygłupiaj. Wybierz swój ruch: kamień, papier lub nożyce. Tu się nie gra kaloryferem, krzesłem ...ani śrubokrętem');
-    }
   }
 
   printMessage ('wynik: '+ displayResult(argComputerMove, argPlayerMove));
